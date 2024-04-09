@@ -24,8 +24,56 @@ tasks.withType(JavaCompile) {
 dependencies {
     compileOnly('javax.servlet:javax.servlet-api:4.0.1')
 
+
+
+    //스프링 라이브러리 core, context, test
+    implementation group: 'org.springframework', name: 'spring-core', version: '5.3.33'
+    implementation group: 'org.springframework', name: 'spring-context', version: '5.3.33'
+    implementation group: 'org.springframework', name: 'spring-test', version: '5.3.33'
+
+
+    //spring-web-mvc
+    implementation group: 'org.springframework', name: 'spring-webmvc', version: '5.3.19'
+
+
+
+    //DataSource 구성(마리아 DB)
+    implementation 'org.mariadb.jdbc:mariadb-java-client:3.0.3'
+    implementation group: 'com.zaxxer', name: 'HikariCP', version: '5.0.1'
+
+    // jdbc, transaction
+    implementation group: 'org.springframework', name: 'spring-jdbc', version: '5.3.19'
+    implementation group: 'org.springframework', name: 'spring-tx', version: '5.3.19'
+
+    // mybatis 관련
+    implementation 'org.mybatis:mybatis:3.5.9'
+    implementation 'org.mybatis:mybatis-spring:2.0.7'
+
+
+
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+
+    //롬복 관련
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
+    testCompileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
+    testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
+
+    //Log4J2
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.17.2'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.17.2'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.17.2'
+
+    //JSTL
+    implementation group: 'jstl', name: 'jstl', version: '1.2'
+
+    //mybatis 관련
+    implementation 'org.mybatis:mybatis:3.5.9'
+    implementation 'org.mybatis:mybatis-spring:2.0.7'
+
+
+
 }
 
 test {
