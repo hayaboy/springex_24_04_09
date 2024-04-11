@@ -9,23 +9,21 @@
     <option name="showSidePanel" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dbd79bc6-170e-48ec-a8e8-595a0f64eacb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="dbd79bc6-170e-48ec-a8e8-595a0f64eacb" name="Changes" comment="24_4_9_마이바티스테스트완료">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/green/springex/controller/SampleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/green/springex/domain/TodoVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/green/springex/dto/TodoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/aaa.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ex4.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ex5.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ex6.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/hi.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/hi2.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/todoModel.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/todoModelAttribute.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/green/springex/mapper/TimeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/green/springex/mapper/TimeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/green/springex/sample/EventSampleDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/green/springex/sample/EventSampleDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/green/springex/sample/SampleDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/green/springex/sample/SampleDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/green/springex/sample/SampleDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/green/springex/sample/SampleDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/green/springex/sample/SampleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/green/springex/sample/SampleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/TimeTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/TimeTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/root-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/root-context.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/green/springex/SampleTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/green/springex/SampleTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mapper/TimeMapperTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mapper/TimeMapperTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +38,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="spring-beans.schema" />
         <option value="Interface" />
+        <option value="spring-beans.schema" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -82,6 +81,7 @@
     "Tomcat Server.Tomcat 9.0.85.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/springex/src/main/webapp/WEB-INF/views",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -91,7 +91,16 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.TimeMapperTests.testTime">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\springex\src\main\webapp\WEB-INF\views" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.green.springex.dto" />
+      <recent name="com.green.springex.domain" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.85">
     <configuration name="SampleTests.testConnect" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -166,6 +175,7 @@
     </configuration>
     <configuration name="Tomcat 9.0.85" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.85" ALTERNATIVE_JRE_ENABLED="false">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8 -Duser.language=en -Duser.region=en" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="HOT_SWAP_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATING_POLICY" value="hot-swap-classes" />
@@ -254,6 +264,12 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Gradle.SampleTests.testConnect" />
+      <item itemvalue="Gradle.SampleTests.testService1" />
+      <item itemvalue="Gradle.TimeMapperTests.testTime" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.85" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.TimeMapperTests.testTime" />
@@ -279,8 +295,18 @@
       <updated>1712549677799</updated>
       <workItem from="1712549678834" duration="2859000" />
       <workItem from="1712622568213" duration="4202000" />
-      <workItem from="1712627774104" duration="6714000" />
+      <workItem from="1712627774104" duration="8851000" />
+      <workItem from="1712794740831" duration="6276000" />
     </task>
+    <task id="LOCAL-00001" summary="24_4_9_마이바티스테스트완료">
+      <option name="closed" value="true" />
+      <created>1712635636458</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712635636458</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,6 +322,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="24_4_9_마이바티스테스트완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="24_4_9_마이바티스테스트완료" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
