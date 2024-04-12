@@ -1,4 +1,4 @@
-package mapper;
+package com.green.springex.mapper;
 
 import com.green.springex.mapper.TimeMapper;
 import lombok.extern.log4j.Log4j2;

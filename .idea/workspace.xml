@@ -9,26 +9,44 @@
     <option name="showSidePanel" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dbd79bc6-170e-48ec-a8e8-595a0f64eacb" name="Changes" comment="24_4_9_마이바티스테스트완료">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/green/springex/controller/SampleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/green/springex/domain/TodoVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/green/springex/dto/TodoDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/aaa.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ex4.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ex5.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ex6.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/hi.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/hi2.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/todoModel.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/todoModelAttribute.jsp" afterDir="false" />
+    <list default="true" id="dbd79bc6-170e-48ec-a8e8-595a0f64eacb" name="Changes" comment="24_4_11_마이바티스테스트완료_스프링MVC완료">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/green/springex/config/ModelMapperConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/green/springex/controller/TodoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/green/springex/controller/exception/CommonExceptionAdvice2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/green/springex/controller/formatter/LocalDateFormatter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/green/springex/mapper/TodoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/green/springex/service/TodoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/green/springex/service/TodoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/TodoMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/custom404.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/todo/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/todo/modify.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/todo/read.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/todo/register.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/green/springex/mapper/TodoMapperTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/green/springex/service/TodoServiceTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/green/springex/controller/SampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/green/springex/controller/SampleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/green/springex/domain/TodoVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/green/springex/domain/TodoVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/green/springex/dto/TodoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/green/springex/dto/TodoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/root-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/root-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ex6.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ex6.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mapper/TimeMapperTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/green/springex/mapper/TimeMapperTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="printScope" value="4" />
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/exportToHTML" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -38,10 +56,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="spring-beans.schema" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="HTML File" />
+        <option value="spring-beans.schema" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -71,10 +90,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
     "Gradle.Build springex.executor": "Run",
     "Gradle.SampleTests.testConnect.executor": "Run",
     "Gradle.SampleTests.testService1.executor": "Run",
     "Gradle.TimeMapperTests.testTime.executor": "Run",
+    "Gradle.TodoMapperTests.testGetTime.executor": "Run",
+    "Gradle.TodoMapperTests.testInsert.executor": "Run",
+    "Gradle.TodoMapperTests.testSelectAll.executor": "Run",
+    "Gradle.TodoServiceTests.testRegister.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -89,11 +114,20 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\springex\src\main\webapp\WEB-INF\views" />
+      <recent name="C:\springex\src\main\java\com\green\springex\controller" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\springex\src\main\webapp\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.green.springex.dto" />
@@ -101,54 +135,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.85">
-    <configuration name="SampleTests.testConnect" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.green.springex.SampleTests.testConnect&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="SampleTests.testService1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.green.springex.SampleTests.testService1&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="TimeMapperTests.testTime" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -163,6 +149,102 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;mapper.TimeMapperTests.testTime&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TodoMapperTests.testGetTime" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;mapper.TodoMapperTests.testGetTime&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TodoMapperTests.testInsert" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;mapper.TodoMapperTests.testInsert&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TodoMapperTests.testSelectAll" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.green.springex.mapper.TodoMapperTests.testSelectAll&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TodoServiceTests.testRegister" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.green.springex.service.TodoServiceTests.testRegister&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -265,16 +347,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.SampleTests.testConnect" />
-      <item itemvalue="Gradle.SampleTests.testService1" />
+      <item itemvalue="Gradle.TodoMapperTests.testGetTime" />
+      <item itemvalue="Gradle.TodoMapperTests.testInsert" />
+      <item itemvalue="Gradle.TodoMapperTests.testSelectAll" />
+      <item itemvalue="Gradle.TodoServiceTests.testRegister" />
       <item itemvalue="Gradle.TimeMapperTests.testTime" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.85" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.TodoMapperTests.testSelectAll" />
+        <item itemvalue="Gradle.TodoServiceTests.testRegister" />
+        <item itemvalue="Gradle.TodoMapperTests.testInsert" />
+        <item itemvalue="Gradle.TodoMapperTests.testGetTime" />
         <item itemvalue="Gradle.TimeMapperTests.testTime" />
-        <item itemvalue="Gradle.SampleTests.testConnect" />
-        <item itemvalue="Gradle.SampleTests.testService1" />
       </list>
     </recent_temporary>
   </component>
@@ -296,7 +382,8 @@
       <workItem from="1712549678834" duration="2859000" />
       <workItem from="1712622568213" duration="4202000" />
       <workItem from="1712627774104" duration="8851000" />
-      <workItem from="1712794740831" duration="6276000" />
+      <workItem from="1712794740831" duration="15409000" />
+      <workItem from="1712880342654" duration="14520000" />
     </task>
     <task id="LOCAL-00001" summary="24_4_9_마이바티스테스트완료">
       <option name="closed" value="true" />
@@ -306,7 +393,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712635636458</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="24_4_11_마이바티스테스트완료_스프링MVC완료">
+      <option name="closed" value="true" />
+      <created>1712801631455</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712801631455</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,7 +420,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="24_4_9_마이바티스테스트완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="24_4_9_마이바티스테스트완료" />
+    <MESSAGE value="24_4_11_마이바티스테스트완료_스프링MVC완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="24_4_11_마이바티스테스트완료_스프링MVC완료" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

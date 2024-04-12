@@ -36,6 +36,11 @@ dependencies {
     implementation group: 'org.springframework', name: 'spring-webmvc', version: '5.3.19'
 
 
+    /*  VO를  DTO를 변환하거나  DTO를 VO로 변환해주는 라이브러리 */
+    implementation group: 'org.modelmapper', name: 'modelmapper', version: '3.1.1'
+
+    //DTO의 검증을 위한 Validate 관련 라이브러리
+    implementation group: 'org.hibernate.validator', name: 'hibernate-validator', version: '6.2.1.Final'
 
     //DataSource 구성(마리아 DB)
     implementation 'org.mariadb.jdbc:mariadb-java-client:3.0.3'

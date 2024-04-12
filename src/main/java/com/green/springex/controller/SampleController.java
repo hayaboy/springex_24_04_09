@@ -5,11 +5,12 @@ import com.sun.org.apache.xpath.internal.operations.Mod;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.Map;
 
 @Controller
 @Log4j2
@@ -18,9 +19,24 @@ public class SampleController {
     //return type이 void인 경우 hi 요청 후 hi.jsp
     @GetMapping("/hi")
     public void hello(){
-        log.info("hello");
+        log.info("하이로 요청함#" + "hello");
     }
 
+//    @GetMapping("/hi3")
+//    public TodoDTO hello3(){
+//        log.info("하이3로 요청함##" + "hello");
+//        return new TodoDTO(1L,"제목1", null, false );
+//    }
+
+//    @GetMapping("/hi3")
+//    public Map<String, TodoDTO> hello3(){
+//        log.info("하이3로 요청함##" + "hello");
+//        TodoDTO todoDTO=new TodoDTO(1L,"제목1", null, false );
+//        Map<String, TodoDTO> map=new HashMap<String, TodoDTO>();
+//        map.put("todoDTO", todoDTO);
+//        return map;
+//
+//    }
 
     //return type이 String인 경우 hi2 요청 후 aaa.jsp
     @GetMapping("/hi2")
@@ -82,6 +98,24 @@ public class SampleController {
     @GetMapping("/ex6")
     public void ex6(){
         log.info("ex6");
+    }
+
+
+    //@PostMapping
+//    @PutMapping
+//    @DeleteMapping
+//    public void test(){
+//
+//    }
+
+
+
+
+
+    @GetMapping(value = "/ex7")
+    public void ex7(String p1, int p2){
+        log.info(p1);
+        log.info(p2);
     }
 
 }
