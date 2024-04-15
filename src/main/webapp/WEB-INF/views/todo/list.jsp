@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Title</title>
 </head>
-<h1>나의 할일</h1>
+<h1>Todo Project</h1>
 <body>
 
 <%--${dtoList}--%>
@@ -26,7 +26,7 @@
         <div class="col">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
+                    <a class="navbar-brand" href="#">Menu</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -52,11 +52,11 @@
             <div class="card">
 
                 <div class="card-header">
-                    Featured
+                    할 일 목록
                 </div>
 
                 <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
+                    <%--<h5 class="card-title">할 일 목록</h5>--%>
 
                     <table class="table">
                         <thead>
@@ -73,7 +73,7 @@
                         <c:forEach items="${dtoList}" var="dto" >
                             <tr>
                                 <th scope="row"><c:out value="${dto.tno}" /></th>
-                                <td> <c:out value="${dto.title}" /></td>
+                                <td> <a href="/springex/todo/read?tno=${dto.tno}"> <c:out value="${dto.title}" /> </a></td>
                                 <td> <c:out value="${dto.writer}" /></td>
                                 <td> <c:out value="${dto.dueDate}" /></td>
                                 <td> <c:out value="${dto.finished}" /></td>

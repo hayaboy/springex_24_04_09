@@ -25,6 +25,7 @@ public class TodoController {
     @Autowired
     private TodoService todoService;
 
+    //전체 글 조회
     @GetMapping("/list")
     public void list(Model model) {
         log.info("list --- GET ----");
@@ -32,12 +33,16 @@ public class TodoController {
         model.addAttribute("dtoList", todoService.getAll());
 
     }
+
+    //글 삽입 화면
     @GetMapping("/register")
     public void registerGET() {
         log.info("GET todo register.......");
     }
 
 
+
+    //글 삽입
     @PostMapping("/register")
     public String registerPOST(@Valid TodoDTO todoDTO, BindingResult bindingResult, RedirectAttributes redirectAttributes) {
         log.info("POSt todo register.......");
@@ -54,4 +59,67 @@ public class TodoController {
         log.info("todoDTO : " + todoDTO);
         return "redirect:/todo/list";
     }
+
+    //글 조회
+    @GetMapping("/read")
+    public void read(Long tno, Model model){
+        log.info("조회하고자 하는 글 번호" +tno );
+        TodoDTO todoDTO=todoService.getOne(tno);
+        log.info("글 조회 : " + todoDTO);
+        model.addAttribute("dto", todoDTO);
+    }
+
+
+    //수정/삭제 화면, 수정/삭제하고자 하는 기존의 글을 가져와야 함
+    @GetMapping("/modify")
+    public void modifyGET(Long tno, Model model){
+        log.info("수정/삭제하고자 하는 글 번호" +tno );
+        //수정/삭제하고자 하는 기존의 글을 가져와야 함
+        TodoDTO todoDTO =todoService.getOne(tno);
+        log.info("todoDTO" + todoDTO);
+        model.addAttribute("dto", todoDTO);
+
+    }
+
+
+
+    //서버에서 수정
+    @PostMapping("/modify")
+    public String modifyPOST(@Valid TodoDTO todoDTO, BindingResult bindingResult,
+                         RedirectAttributes redirectAttributes){
+        //log.info("기존 todoDTO"  + todoDTO);
+        if(bindingResult.hasErrors()) {
+            log.info("has errors.......");
+            redirectAttributes.addFlashAttribute("errors", bindingResult.getAllErrors() );
+            redirectAttributes.addAttribute("tno", todoDTO.getTno() );
+            return "redirect:/todo/modify";
+        }
+        todoService.modify(todoDTO);
+        log.info("수정후  todoDTO"  + todoDTO);
+
+
+        return "redirect:/todo/list";
+    }
+
+
+
+    //글 삭제
+    @PostMapping("/delete")
+    public String deletePOST(@Valid TodoDTO todoDTO, BindingResult bindingResult,
+                             RedirectAttributes redirectAttributes){
+        log.info("삭제하고자 하는 글 :" + todoDTO);
+        if(bindingResult.hasErrors()) {
+            log.info("has errors.......");
+            redirectAttributes.addFlashAttribute("errors", bindingResult.getAllErrors() );
+            redirectAttributes.addAttribute("tno", todoDTO.getTno() );
+            return "redirect:/todo/modify";
+        }
+
+        todoService.delete(todoDTO);
+
+
+
+        return  "redirect:/todo/list";
+    }
+
 }

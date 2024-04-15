@@ -8,16 +8,35 @@
         select now()
     </select>
 
-
+    <!-- 글 삽입 -->
     <insert id="insert">
         insert tbl_todo(title, dueDate, writer) VALUES (#{title}, #{dueDate}, #{writer});
     </insert>
 
 
-
+    <!-- 글 전체 조회 -->
     <select id="selectAll" resultType="com.green.springex.domain.TodoVO">
         select * from tbl_todo order by tno desc
-
     </select>
+
+
+    <!-- 글 조회 -->
+    <select id="selectOne" resultType="com.green.springex.domain.TodoVO">
+        select * from tbl_todo where tno = #{tno}
+    </select>
+
+
+    <!-- 글 수정-->
+    <update id="update"  >
+        update tbl_todo set title =#{title}, dueDate=#{dueDate}, finished=#{finished} where tno=#{tno};
+    </update>
+
+
+    <!-- 글 삭제-->
+    <delete id="delete" >
+        delete FROM tbl_todo where tno=#{tno};
+    </delete>
+
+
 
 </mapper>
