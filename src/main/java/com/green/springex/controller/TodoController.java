@@ -1,5 +1,6 @@
 package com.green.springex.controller;
 
+import com.green.springex.dto.PageRequestDTO;
 import com.green.springex.dto.TodoDTO;
 import com.green.springex.service.TodoService;
 
@@ -26,13 +27,30 @@ public class TodoController {
     private TodoService todoService;
 
     //전체 글 조회
-    @GetMapping("/list")
-    public void list(Model model) {
-        log.info("list --- GET ----");
+//    @GetMapping("/list")
+//    public void list(Model model) {
+//        log.info("list --- GET ----");
+//
+//        model.addAttribute("dtoList", todoService.getAll());
+//
+//    }
 
-        model.addAttribute("dtoList", todoService.getAll());
+    //전체 글 조회(페이징 적용
+    @GetMapping("/list")
+    public void list(@Valid PageRequestDTO pageRequestDTO, BindingResult bindingResult, Model  model) {
+        log.info("list --- GET ----");
+        log.info("pageRequestDTO" +pageRequestDTO);
+
+        //잘못된 파라미터값들이 들어오는 경우 기본값인 page 1, size는 10으로 고정된 값을 처리하도록 함
+        if(bindingResult.hasErrors()){
+            pageRequestDTO=PageRequestDTO.builder().build();
+        }
+
+        model.addAttribute("responseDTO", todoService.getPagingList(pageRequestDTO));
 
     }
+
+
 
     //글 삽입 화면
     @GetMapping("/register")
@@ -116,5 +134,7 @@ public class TodoController {
 
         return  "redirect:/todo/list";
     }
+
+
 
 }

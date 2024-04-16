@@ -70,7 +70,18 @@
                         </thead>
                         <tbody>
 
-                        <c:forEach items="${dtoList}" var="dto" >
+<%--                        <c:forEach items="${dtoList}" var="dto" >--%>
+<%--                            <tr>--%>
+<%--                                <th scope="row"><c:out value="${dto.tno}" /></th>--%>
+<%--                                <td> <a href="/springex/todo/read?tno=${dto.tno}"> <c:out value="${dto.title}" /> </a></td>--%>
+<%--                                <td> <c:out value="${dto.writer}" /></td>--%>
+<%--                                <td> <c:out value="${dto.dueDate}" /></td>--%>
+<%--                                <td> <c:out value="${dto.finished}" /></td>--%>
+<%--                            </tr>--%>
+
+<%--                        </c:forEach>--%>
+
+                        <c:forEach items="${responseDTO.dtoList}" var="dto" >
                             <tr>
                                 <th scope="row"><c:out value="${dto.tno}" /></th>
                                 <td> <a href="/springex/todo/read?tno=${dto.tno}"> <c:out value="${dto.title}" /> </a></td>
@@ -80,6 +91,7 @@
                             </tr>
 
                         </c:forEach>
+
 
 
                         </tbody>
