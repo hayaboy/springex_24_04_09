@@ -1,6 +1,7 @@
 package com.green.springex.mapper;
 
 import com.green.springex.domain.TodoVO;
+import com.green.springex.dto.PageRequestDTO;
 
 import java.util.List;
 
@@ -23,4 +24,13 @@ public interface TodoMapper {
 
     //글 삭제
     void delete(TodoVO todoVO);
+
+
+    //페이징 적용한 글 조회
+    List<TodoVO> selectPagingList(PageRequestDTO pageRequestDTO);
+
+
+    //전체 글 갯수 조회
+    int getCount(PageRequestDTO pageRequestDTO);
+
 }

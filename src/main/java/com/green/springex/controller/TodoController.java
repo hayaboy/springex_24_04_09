@@ -105,15 +105,10 @@ public class TodoController {
 
     //글 삭제
     @PostMapping("/delete")
-    public String deletePOST(@Valid TodoDTO todoDTO, BindingResult bindingResult,
+    public String deletePOST( TodoDTO todoDTO, BindingResult bindingResult,
                              RedirectAttributes redirectAttributes){
         log.info("삭제하고자 하는 글 :" + todoDTO);
-        if(bindingResult.hasErrors()) {
-            log.info("has errors.......");
-            redirectAttributes.addFlashAttribute("errors", bindingResult.getAllErrors() );
-            redirectAttributes.addAttribute("tno", todoDTO.getTno() );
-            return "redirect:/todo/modify";
-        }
+//
 
         todoService.delete(todoDTO);
 

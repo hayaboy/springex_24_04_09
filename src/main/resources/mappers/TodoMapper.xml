@@ -37,6 +37,18 @@
         delete FROM tbl_todo where tno=#{tno};
     </delete>
 
+    <!-- 페이지 적용 후  글 조회-->
+
+    <select id="selectPagingList" resultType="com.green.springex.domain.TodoVO">
+
+        select * from tbl_todo order by tno desc  limit #{skip}, #{size}
+
+    </select>
+
+
+    <select id="getCount" resultType="int">
+        select  count(*) from tbl_todo
+    </select>
 
 
 </mapper>
