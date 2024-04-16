@@ -79,13 +79,24 @@ public class TodoController {
     }
 
     //글 조회
+//    @GetMapping("/read")
+//    public void read(Long tno, Model model){
+//        log.info("조회하고자 하는 글 번호" +tno );
+//        TodoDTO todoDTO=todoService.getOne(tno);
+//        log.info("글 조회 : " + todoDTO);
+//        model.addAttribute("dto", todoDTO);
+//    }
+
+
+    //글 조회
     @GetMapping("/read")
-    public void read(Long tno, Model model){
-        log.info("조회하고자 하는 글 번호" +tno );
-        TodoDTO todoDTO=todoService.getOne(tno);
-        log.info("글 조회 : " + todoDTO);
-        model.addAttribute("dto", todoDTO);
+    public void read(Long tno,PageRequestDTO pageRequestDTO, Model model){
+        TodoDTO todoDTO = todoService.getOne(tno);
+        log.info(todoDTO);
+
+        model.addAttribute("dto", todoDTO );
     }
+
 
 
     //수정/삭제 화면, 수정/삭제하고자 하는 기존의 글을 가져와야 함

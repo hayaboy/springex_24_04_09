@@ -36,4 +36,18 @@ public class PageRequestDTO {
                 ", size=" + size +", "+"skip="+getSkip()+
                 '}';
     }
+
+    // 글 조회 후 해당 글이 있는 위치를 문자열로 저장
+    private String link;
+    public String getLink() {
+        if(link == null){
+            StringBuilder builder = new StringBuilder();
+
+            builder.append("page=" + this.page);
+
+            builder.append("&size=" + this.size);
+            link = builder.toString();
+        }
+        return link;
+    }
 }

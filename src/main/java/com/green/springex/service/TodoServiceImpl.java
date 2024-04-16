@@ -101,9 +101,9 @@ public class TodoServiceImpl implements TodoService{
         log.info(pageResponseDTO.getEnd() > (int)(Math.ceil((total/(double)10))) ? (int)(Math.ceil((total/(double)10))): pageResponseDTO.getEnd());
         log.info("최종 end : " + pageResponseDTO.getEnd());
 
-        log.info("이전 페이지 존재 여부 " + (pageResponseDTO.getStart() > 1) );
+        log.info("prev 버튼 여부 " + (pageResponseDTO.getStart() > 1) );
 
-        log.info("다음 페이지 존재 여부 " + (total >  pageResponseDTO.getEnd() * 10 ));
+        log.info("next 버튼 여부 " + (total >  pageResponseDTO.getEnd() * 10 ));
         return pageResponseDTO;
     }
 

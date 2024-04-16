@@ -111,7 +111,7 @@
 <script>
     //목록 페이지로 이동하는 이벤트 처리
     document.querySelector(".btn-secondary").addEventListener("click", function (event) {
-        self.location="/springex/todo/list"
+        self.location="/springex/todo/list?${pageRequestDTO.link}"
     }, false)
 
     //수정 / 삭제 페이지로 이동하는 이벤트 처리
