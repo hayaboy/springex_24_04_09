@@ -116,7 +116,9 @@
 
     //수정 / 삭제 페이지로 이동하는 이벤트 처리
     document.querySelector(".btn-primary").addEventListener("click", function (event) {
-        self.location="/springex/todo/modify?tno="+${dto.tno}
+        <%--self.location="/springex/todo/modify?tno="+${dto.tno}--%>
+        // 수정 삭제 페이지로 이동시 페이징 정보를 유지한 채로 가야 하게 끔 수정
+        self.location=`/springex/todo/modify?tno=${dto.tno}&${pageRequestDTO.link}`
     }, false)
 
 </script>

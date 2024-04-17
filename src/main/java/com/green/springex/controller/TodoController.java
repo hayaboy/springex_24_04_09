@@ -38,7 +38,7 @@ public class TodoController {
     //전체 글 조회(페이징 적용
     @GetMapping("/list")
     public void list(@Valid PageRequestDTO pageRequestDTO, BindingResult bindingResult, Model  model) {
-        log.info("list --- GET ----");
+        log.info("list --- GET#----");
         log.info("pageRequestDTO" +pageRequestDTO);
 
         //잘못된 파라미터값들이 들어오는 경우 기본값인 page 1, size는 10으로 고정된 값을 처리하도록 함
@@ -101,7 +101,7 @@ public class TodoController {
 
     //수정/삭제 화면, 수정/삭제하고자 하는 기존의 글을 가져와야 함
     @GetMapping("/modify")
-    public void modifyGET(Long tno, Model model){
+    public void modifyGET(Long tno,PageRequestDTO pageRequestDTO, Model model){
         log.info("수정/삭제하고자 하는 글 번호" +tno );
         //수정/삭제하고자 하는 기존의 글을 가져와야 함
         TodoDTO todoDTO =todoService.getOne(tno);
@@ -114,7 +114,7 @@ public class TodoController {
 
     //서버에서 수정
     @PostMapping("/modify")
-    public String modifyPOST(@Valid TodoDTO todoDTO, BindingResult bindingResult,
+    public String modifyPOST(PageRequestDTO pageRequestDTO,@Valid TodoDTO todoDTO, BindingResult bindingResult,
                          RedirectAttributes redirectAttributes){
         //log.info("기존 todoDTO"  + todoDTO);
         if(bindingResult.hasErrors()) {
@@ -126,7 +126,8 @@ public class TodoController {
         todoService.modify(todoDTO);
         log.info("수정후  todoDTO"  + todoDTO);
 
-
+        redirectAttributes.addAttribute("page",pageRequestDTO.getPage() );
+        redirectAttributes.addAttribute("size",pageRequestDTO.getSize());
         return "redirect:/todo/list";
     }
 
@@ -134,14 +135,15 @@ public class TodoController {
 
     //글 삭제
     @PostMapping("/delete")
-    public String deletePOST( TodoDTO todoDTO, BindingResult bindingResult,
+    public String deletePOST(PageRequestDTO pageRequestDTO, TodoDTO todoDTO, BindingResult bindingResult,
                              RedirectAttributes redirectAttributes){
         log.info("삭제하고자 하는 글 :" + todoDTO);
 //
 
         todoService.delete(todoDTO);
 
-
+        redirectAttributes.addAttribute("page",pageRequestDTO.getPage() );
+        redirectAttributes.addAttribute("size",pageRequestDTO.getSize());
 
         return  "redirect:/todo/list";
     }

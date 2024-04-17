@@ -45,6 +45,14 @@
 
                     <form action="/springex/todo/modify"  method="post">
 
+                        <%--
+                        수정 / 삭제 작업은 POST 방식으로 처리되고 처리된 후에는 다시 목록으로 돌아야가 하므로 form 태그로 데이터를 전송할 때
+                        페이지와 관련된 정보를 같이 추가해서 전달해야만 합니다.
+                        --%>
+
+                        <input type="hidden" name="page" value="${pageRequestDTO.page}">
+                        <input type="hidden" name="page" value="${pageRequestDTO.size}">
+
                         <div class="input-group mb-3">
                             <span class="input-group-text">TNO</span>
                             <input type="text" name="tno" class="form-control"
@@ -116,8 +124,13 @@
 <script>
 
     //목록 페이지로 이동하는 이벤트 처리
-    document.querySelector(".btn-secondary").addEventListener("click", function (event) {
-        self.location="/springex/todo/list"
+    document.querySelector(".btn-secondary").addEventListener("click", function (e) {
+        // self.location="/springex/todo/list"
+         e.preventDefault()// 기본 이벤트 중지
+         e.stopPropagation() // 버블링(전파) 막기
+        <%--self.location="/springex/todo/list?${pageRequestDTO.link}"--%>
+        self.location=`/springex/todo/list?${pageRequestDTO.link}`
+
     }, false)
 
     //수정하는 이벤트 처리

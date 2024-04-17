@@ -29,13 +29,7 @@ public class PageRequestDTO {
     }
 
 
-    @Override
-    public String toString() {
-        return "PageRequestDTO{" +
-                "page=" + page +
-                ", size=" + size +", "+"skip="+getSkip()+
-                '}';
-    }
+
 
     // 글 조회 후 해당 글이 있는 위치를 문자열로 저장
     private String link;
@@ -49,5 +43,14 @@ public class PageRequestDTO {
             link = builder.toString();
         }
         return link;
+    }
+
+
+    @Override
+    public String toString() {
+        return "PageRequestDTO{" +
+                "page=" + page +
+                ", size=" + size +", "+"skip="+getSkip()+
+                '}';
     }
 }

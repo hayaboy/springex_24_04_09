@@ -75,14 +75,14 @@ public class TodoServiceImpl implements TodoService{
 
         List<TodoVO> voList= todoMapper.selectPagingList(pageRequestDTO);
 
-        log.info("voList : " + voList);
+        //log.info("voList : " + voList);
         List<TodoDTO> dtoList=voList.stream().map((vo)->modelMapper.map(vo, TodoDTO.class)).collect(Collectors.toList());
 
-        log.info("dtoList : " + dtoList);
+        //log.info("dtoList : " + dtoList);
         int total=todoMapper.getCount(pageRequestDTO);
-        log.info("total : " + total);
+        //log.info("total : " + total);
 
-        log.info("page :" + pageRequestDTO.getPage());
+        //log.info("page :" + pageRequestDTO.getPage());
 
 
 
@@ -90,20 +90,20 @@ public class TodoServiceImpl implements TodoService{
         PageResponseDTO<TodoDTO> pageResponseDTO=PageResponseDTO.<TodoDTO>myMethod()
                 .dtoList(dtoList).total(total).pageRequestDTO(pageRequestDTO).build();
 
-        log.info("조회 결과의 마지막 번호 end : " + pageResponseDTO.getEnd() );
-
-        log.info("조회 결과의 시작 번호 start : " + pageResponseDTO.getStart() );
-
-        log.info("마지막 페이지 last : " + (int)(Math.ceil((total/(double)10))) + "페이지");
+//        log.info("조회 결과의 마지막 번호 end : " + pageResponseDTO.getEnd() );
+//
+//        log.info("조회 결과의 시작 번호 start : " + pageResponseDTO.getStart() );
+//
+//        log.info("마지막 페이지 last : " + (int)(Math.ceil((total/(double)10))) + "페이지");
 
         // 10 > 103  false 이므로 end는 10, 반대인 경우는 last(103)
-        log.info("end 점검");
-        log.info(pageResponseDTO.getEnd() > (int)(Math.ceil((total/(double)10))) ? (int)(Math.ceil((total/(double)10))): pageResponseDTO.getEnd());
-        log.info("최종 end : " + pageResponseDTO.getEnd());
-
-        log.info("prev 버튼 여부 " + (pageResponseDTO.getStart() > 1) );
-
-        log.info("next 버튼 여부 " + (total >  pageResponseDTO.getEnd() * 10 ));
+        //log.info("end 점검");
+//        log.info(pageResponseDTO.getEnd() > (int)(Math.ceil((total/(double)10))) ? (int)(Math.ceil((total/(double)10))): pageResponseDTO.getEnd());
+//        log.info("최종 end : " + pageResponseDTO.getEnd());
+//
+//        log.info("prev 버튼 여부 " + (pageResponseDTO.getStart() > 1) );
+//
+//        log.info("next 버튼 여부 " + (total >  pageResponseDTO.getEnd() * 10 ));
         return pageResponseDTO;
     }
 
