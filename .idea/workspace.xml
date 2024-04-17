@@ -9,14 +9,13 @@
     <option name="showSidePanel" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dbd79bc6-170e-48ec-a8e8-595a0f64eacb" name="Changes" comment="24_4_15_마이바티스테스트완료_스프링MVC완료_부트스트랩적용2_페이징적용1">
+    <list default="true" id="dbd79bc6-170e-48ec-a8e8-595a0f64eacb" name="Changes" comment="24_4_15_마이바티스테스트완료_스프링MVC완료_부트스트랩적용2_페이징적용완료">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/green/springex/controller/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/green/springex/controller/TodoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/green/springex/dto/PageRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/green/springex/dto/PageRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/green/springex/service/TodoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/green/springex/service/TodoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/green/springex/mapper/TodoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/green/springex/mapper/TodoMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/todo/modify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/todo/modify.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/todo/read.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/todo/read.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/TodoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/TodoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/green/springex/mapper/TodoMapperTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/green/springex/mapper/TodoMapperTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +82,7 @@
     "Gradle.TodoMapperTests.testSelectAll.executor": "Run",
     "Gradle.TodoMapperTests.testSelectList.executor": "Run",
     "Gradle.TodoMapperTests.testSelectOne.executor": "Run",
+    "Gradle.TodoMapperTests.testSelectSearch.executor": "Run",
     "Gradle.TodoMapperTests.testgetCount.executor": "Run",
     "Gradle.TodoServiceTests.testPaging.executor": "Run",
     "Gradle.TodoServiceTests.testRegister.executor": "Run",
@@ -120,8 +120,8 @@
       <recent name="com.green.springex.domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.85">
-    <configuration name="TodoMapperTests.bulkTestInsert" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.TodoMapperTests.testSelectSearch">
+    <configuration name="TodoMapperTests.testInsert" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -134,7 +134,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.green.springex.mapper.TodoMapperTests.bulkTestInsert&quot;" />
+            <option value="&quot;com.green.springex.mapper.TodoMapperTests.testInsert&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -145,7 +145,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TodoMapperTests.testSelectList" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TodoMapperTests.testSelectSearch" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -158,7 +158,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.green.springex.mapper.TodoMapperTests.testSelectList&quot;" />
+            <option value="&quot;com.green.springex.mapper.TodoMapperTests.testSelectSearch&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -333,20 +333,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.TodoMapperTests.testSelectList" />
+      <item itemvalue="Gradle.TodoMapperTests.testInsert" />
+      <item itemvalue="Gradle.TodoMapperTests.testSelectSearch" />
       <item itemvalue="Gradle.TodoMapperTests.testgetCount" />
       <item itemvalue="Gradle.TodoServiceTests.testPaging" />
-      <item itemvalue="Gradle.TodoMapperTests.bulkTestInsert" />
       <item itemvalue="Gradle.TodoServiceTests.testRegister" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.85" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.TodoMapperTests.testSelectSearch" />
+        <item itemvalue="Gradle.TodoMapperTests.testInsert" />
         <item itemvalue="Gradle.TodoServiceTests.testPaging" />
         <item itemvalue="Gradle.TodoServiceTests.testRegister" />
         <item itemvalue="Gradle.TodoMapperTests.testgetCount" />
-        <item itemvalue="Gradle.TodoMapperTests.testSelectList" />
-        <item itemvalue="Gradle.TodoMapperTests.bulkTestInsert" />
       </list>
     </recent_temporary>
   </component>
@@ -373,7 +373,7 @@
       <workItem from="1713140046056" duration="15941000" />
       <workItem from="1713176056741" duration="18000" />
       <workItem from="1713226712612" duration="14375000" />
-      <workItem from="1713317698768" duration="4455000" />
+      <workItem from="1713317698768" duration="8827000" />
     </task>
     <task id="LOCAL-00001" summary="24_4_9_마이바티스테스트완료">
       <option name="closed" value="true" />
@@ -423,7 +423,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713238098113</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="24_4_15_마이바티스테스트완료_스프링MVC완료_부트스트랩적용2_페이징적용완료">
+      <option name="closed" value="true" />
+      <created>1713322507955</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1713322507955</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,7 +454,8 @@
     <MESSAGE value="24_4_12_마이바티스테스트완료_스프링MVC완료_부트스트랩적용1" />
     <MESSAGE value="24_4_15_마이바티스테스트완료_스프링MVC완료_부트스트랩적용2" />
     <MESSAGE value="24_4_15_마이바티스테스트완료_스프링MVC완료_부트스트랩적용2_페이징적용1" />
-    <option name="LAST_COMMIT_MESSAGE" value="24_4_15_마이바티스테스트완료_스프링MVC완료_부트스트랩적용2_페이징적용1" />
+    <MESSAGE value="24_4_15_마이바티스테스트완료_스프링MVC완료_부트스트랩적용2_페이징적용완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="24_4_15_마이바티스테스트완료_스프링MVC완료_부트스트랩적용2_페이징적용완료" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

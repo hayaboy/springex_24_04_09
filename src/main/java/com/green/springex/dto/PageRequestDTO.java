@@ -5,6 +5,7 @@ import lombok.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.Positive;
+import java.time.LocalDate;
 
 @Builder
 @Getter
@@ -28,11 +29,27 @@ public class PageRequestDTO {
         return (page-1)*10;
     }
 
-
-
-
     // 글 조회 후 해당 글이 있는 위치를 문자열로 저장
     private String link;
+
+
+    // 키워드 검색을 위한 변수 선언
+
+    private String[] types;
+
+    private String keyword;
+
+    private boolean finished;
+
+    private LocalDate from;
+
+    private LocalDate to;
+
+
+
+
+
+
     public String getLink() {
         if(link == null){
             StringBuilder builder = new StringBuilder();

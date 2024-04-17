@@ -18,7 +18,7 @@
         <logger name="com.green" level="info" additivity="false">
             <AppenderRef ref="Console"/>
         </logger>
-        <logger name="com.green.springex.mapper" level="info" additivity="false">
+        <logger name="com.green.springex.mapper" level="debug" additivity="false">
             <AppenderRef ref="Console"/>
         </logger>
 

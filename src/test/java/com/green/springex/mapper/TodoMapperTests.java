@@ -31,8 +31,8 @@ public class TodoMapperTests {
 
     @Test
     public void testInsert(){
-        TodoVO todoVO=TodoVO.builder().title("스프링테스트1")
-                .dueDate(LocalDate.of(2024,04,17)).writer("user00").build();
+        TodoVO todoVO=TodoVO.builder().title("짜장")
+                .dueDate(LocalDate.of(2025,06,20)).writer("user02").build();
         todoMapper.insert(todoVO);
     };
 
@@ -86,4 +86,25 @@ public class TodoMapperTests {
         log.info("전체 글 갯수" + totalCont);
 
     }
+
+
+    //키워드 검색
+    @Test
+    public void testSelectSearch(){
+
+        PageRequestDTO pageRequestDTO =PageRequestDTO.builder().page(1).size(10).
+                types(new String[]{"t","w"}).keyword("2").build();
+
+        log.info("검색 조건 테스트 결과 :  " + pageRequestDTO);
+
+        List<TodoVO> todoVOList=todoMapper.selectConditionList(pageRequestDTO);
+        todoVOList.forEach((vo)->{log.info(vo);});
+
+
+
+    }
+
+
+
+
 }

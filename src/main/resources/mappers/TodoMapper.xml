@@ -45,10 +45,42 @@
 
     </select>
 
-
+    <!-- 전체 글 개수 조회-->
     <select id="getCount" resultType="int">
         select  count(*) from tbl_todo
     </select>
+
+    <!-- 조건에 따른 검색 후 조회-->
+    <select id="selectConditionList" resultType="com.green.springex.domain.TodoVO">
+        select * from tbl_todo
+
+        <where>
+
+            <if test="types !=null and types.length >0  ">
+
+                <foreach collection="types" item="type" open="(" close=")" separator=" OR ">
+
+                    <if test="type ==  't'.toString() " >
+                        title like concat('%', #{keyword}, '%')
+                    </if>
+
+                    <if test="type ==  'w'.toString() " >
+                        writer like concat('%', #{keyword}, '%')
+                    </if>
+
+                </foreach>
+
+            </if>
+
+
+
+        </where>
+
+
+        order by tno desc limit #{skip}, #{size}
+
+    </select>
+
 
 
 </mapper>

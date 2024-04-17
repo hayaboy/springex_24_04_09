@@ -33,4 +33,9 @@ public interface TodoMapper {
     //전체 글 갯수 조회
     int getCount(PageRequestDTO pageRequestDTO);
 
+
+    // 조건에 따른 검색 후 조회
+
+    List<TodoVO> selectConditionList(PageRequestDTO pageRequestDTO);
+
 }
