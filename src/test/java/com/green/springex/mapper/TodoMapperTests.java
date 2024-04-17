@@ -32,7 +32,7 @@ public class TodoMapperTests {
     @Test
     public void testInsert(){
         TodoVO todoVO=TodoVO.builder().title("짜장")
-                .dueDate(LocalDate.of(2025,06,20)).writer("user02").build();
+                .dueDate(LocalDate.of(2024,06,20)).writer("user02").build();
         todoMapper.insert(todoVO);
     };
 
@@ -69,9 +69,11 @@ public class TodoMapperTests {
     //페이징을 적용한 글 조회
     @Test
     public void testSelectList(){
-        log.info("마지막 페이지 " + (int)(Math.ceil(1024/(double)10)));
+        //log.info("마지막 페이지 " + (int)(Math.ceil(1024/(double)10)));
 
-        PageRequestDTO pageRequestDTO=PageRequestDTO.builder().page(103).size(10).build();
+        PageRequestDTO pageRequestDTO=PageRequestDTO.builder().page(1).size(10)
+                .types(new String[]{"t","w"}).keyword("짜장").finished(true)
+                .build();
         List<TodoVO> voList=todoMapper.selectPagingList(pageRequestDTO);
         log.info("페이징 처리 후 결과 : " + voList);
 
@@ -81,7 +83,10 @@ public class TodoMapperTests {
     //전체 글 갯수 조회
     @Test
     public void testgetCount(){
-        PageRequestDTO pageRequestDTO= PageRequestDTO.builder().page(0).size(1024).build();
+//        PageRequestDTO pageRequestDTO= PageRequestDTO.builder().page(0).size(1024).build();
+        PageRequestDTO pageRequestDTO=PageRequestDTO.builder().page(1).size(10)
+                .types(new String[]{"t","w"}).keyword("짜장").finished(true)
+                .build();
         int totalCont=todoMapper.getCount(pageRequestDTO);
         log.info("전체 글 갯수" + totalCont);
 
@@ -92,19 +97,38 @@ public class TodoMapperTests {
     @Test
     public void testSelectSearch(){
 
-        PageRequestDTO pageRequestDTO =PageRequestDTO.builder().page(1).size(10).
-                types(new String[]{"t","w"}).keyword("2").build();
+        PageRequestDTO pageRequestDTO =PageRequestDTO.builder().page(2).size(10).
+                types(new String[]{"t","w"}).keyword("3").build();
 
         log.info("검색 조건 테스트 결과 :  " + pageRequestDTO);
 
         List<TodoVO> todoVOList=todoMapper.selectConditionList(pageRequestDTO);
         todoVOList.forEach((vo)->{log.info(vo);});
-
-
-
     }
 
 
 
+    @Test
+    public void testSelectSearch2(){
 
+        PageRequestDTO pageRequestDTO =PageRequestDTO.builder().page(1).size(10).
+                types(new String[]{"t","w"}).keyword("짜장").finished(true).build();
+
+        log.info("검색 조건 테스트 결과 :  " + pageRequestDTO);
+
+        List<TodoVO> todoVOList=todoMapper.selectConditionList(pageRequestDTO);
+        todoVOList.forEach((vo)->{log.info(vo);});
+    }
+
+
+    @Test
+    public void testSelectSearch3(){
+        PageRequestDTO pageRequestDTO =PageRequestDTO.builder().page(1).size(10).
+                types(new String[]{"t","w"}).keyword("짜장").finished(true).build();
+
+        log.info("검색 조건 테스트 결과 :  " + pageRequestDTO);
+
+        List<TodoVO> todoVOList=todoMapper.selectConditionList(pageRequestDTO);
+        todoVOList.forEach((vo)->{log.info(vo);});
+    }
 }

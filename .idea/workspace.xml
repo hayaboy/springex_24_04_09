@@ -9,12 +9,10 @@
     <option name="showSidePanel" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dbd79bc6-170e-48ec-a8e8-595a0f64eacb" name="Changes" comment="24_4_15_마이바티스테스트완료_스프링MVC완료_부트스트랩적용2_페이징적용완료">
+    <list default="true" id="dbd79bc6-170e-48ec-a8e8-595a0f64eacb" name="Changes" comment="24_4_15_마이바티스테스트완료_스프링MVC완료_부트스트랩적용2_페이징적용완료_조건후검색1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/green/springex/dto/PageRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/green/springex/dto/PageRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/green/springex/mapper/TodoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/green/springex/mapper/TodoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/TodoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/TodoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/todo/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/todo/list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/green/springex/mapper/TodoMapperTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/green/springex/mapper/TodoMapperTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,6 +81,7 @@
     "Gradle.TodoMapperTests.testSelectList.executor": "Run",
     "Gradle.TodoMapperTests.testSelectOne.executor": "Run",
     "Gradle.TodoMapperTests.testSelectSearch.executor": "Run",
+    "Gradle.TodoMapperTests.testSelectSearch2.executor": "Run",
     "Gradle.TodoMapperTests.testgetCount.executor": "Run",
     "Gradle.TodoServiceTests.testPaging.executor": "Run",
     "Gradle.TodoServiceTests.testRegister.executor": "Run",
@@ -120,7 +119,7 @@
       <recent name="com.green.springex.domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.TodoMapperTests.testSelectSearch">
+  <component name="RunManager" selected="Gradle.TodoMapperTests.testgetCount">
     <configuration name="TodoMapperTests.testInsert" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -135,6 +134,30 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;com.green.springex.mapper.TodoMapperTests.testInsert&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TodoMapperTests.testSelectList" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.green.springex.mapper.TodoMapperTests.testSelectList&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -169,6 +192,30 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="TodoMapperTests.testSelectSearch2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.green.springex.mapper.TodoMapperTests.testSelectSearch2&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="TodoMapperTests.testgetCount" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -183,54 +230,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;com.green.springex.mapper.TodoMapperTests.testgetCount&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="TodoServiceTests.testPaging" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.green.springex.service.TodoServiceTests.testPaging&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="TodoServiceTests.testRegister" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.green.springex.service.TodoServiceTests.testRegister&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -335,18 +334,18 @@
     <list>
       <item itemvalue="Gradle.TodoMapperTests.testInsert" />
       <item itemvalue="Gradle.TodoMapperTests.testSelectSearch" />
+      <item itemvalue="Gradle.TodoMapperTests.testSelectSearch2" />
+      <item itemvalue="Gradle.TodoMapperTests.testSelectList" />
       <item itemvalue="Gradle.TodoMapperTests.testgetCount" />
-      <item itemvalue="Gradle.TodoServiceTests.testPaging" />
-      <item itemvalue="Gradle.TodoServiceTests.testRegister" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.85" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TodoMapperTests.testSelectSearch" />
-        <item itemvalue="Gradle.TodoMapperTests.testInsert" />
-        <item itemvalue="Gradle.TodoServiceTests.testPaging" />
-        <item itemvalue="Gradle.TodoServiceTests.testRegister" />
         <item itemvalue="Gradle.TodoMapperTests.testgetCount" />
+        <item itemvalue="Gradle.TodoMapperTests.testSelectList" />
+        <item itemvalue="Gradle.TodoMapperTests.testInsert" />
+        <item itemvalue="Gradle.TodoMapperTests.testSelectSearch2" />
+        <item itemvalue="Gradle.TodoMapperTests.testSelectSearch" />
       </list>
     </recent_temporary>
   </component>
@@ -373,7 +372,7 @@
       <workItem from="1713140046056" duration="15941000" />
       <workItem from="1713176056741" duration="18000" />
       <workItem from="1713226712612" duration="14375000" />
-      <workItem from="1713317698768" duration="8827000" />
+      <workItem from="1713317698768" duration="12057000" />
     </task>
     <task id="LOCAL-00001" summary="24_4_9_마이바티스테스트완료">
       <option name="closed" value="true" />
@@ -431,7 +430,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713322507955</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="24_4_15_마이바티스테스트완료_스프링MVC완료_부트스트랩적용2_페이징적용완료_조건후검색1">
+      <option name="closed" value="true" />
+      <created>1713327233416</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1713327233416</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -455,7 +462,8 @@
     <MESSAGE value="24_4_15_마이바티스테스트완료_스프링MVC완료_부트스트랩적용2" />
     <MESSAGE value="24_4_15_마이바티스테스트완료_스프링MVC완료_부트스트랩적용2_페이징적용1" />
     <MESSAGE value="24_4_15_마이바티스테스트완료_스프링MVC완료_부트스트랩적용2_페이징적용완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="24_4_15_마이바티스테스트완료_스프링MVC완료_부트스트랩적용2_페이징적용완료" />
+    <MESSAGE value="24_4_15_마이바티스테스트완료_스프링MVC완료_부트스트랩적용2_페이징적용완료_조건후검색1" />
+    <option name="LAST_COMMIT_MESSAGE" value="24_4_15_마이바티스테스트완료_스프링MVC완료_부트스트랩적용2_페이징적용완료_조건후검색1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

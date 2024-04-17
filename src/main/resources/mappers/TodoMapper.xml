@@ -37,23 +37,29 @@
         delete FROM tbl_todo where tno=#{tno};
     </delete>
 
-    <!-- 페이지 적용 후  글 조회-->
+    <!-- 페이지 적용 및 검색 적용 후  글 조회-->
 
     <select id="selectPagingList" resultType="com.green.springex.domain.TodoVO">
 
-        select * from tbl_todo order by tno desc  limit #{skip}, #{size}
+        select * from tbl_todo
+        <include refid="search"></include>
+        order by tno desc limit #{skip}, #{size}
 
     </select>
 
-    <!-- 전체 글 개수 조회-->
+    <!-- 검색 적용 후 글 개수 조회-->
     <select id="getCount" resultType="int">
         select  count(*) from tbl_todo
+
+        <include refid="search"></include>
+
     </select>
 
     <!-- 조건에 따른 검색 후 조회-->
-    <select id="selectConditionList" resultType="com.green.springex.domain.TodoVO">
-        select * from tbl_todo
+<!--    <select id="selectConditionList" resultType="com.green.springex.domain.TodoVO">-->
+<!--        select * from tbl_todo-->
 
+    <sql id="search">
         <where>
 
             <if test="types !=null and types.length >0  ">
@@ -72,14 +78,27 @@
 
             </if>
 
+                <if test="finished">
+
+                    <trim prefix="and">
+                        finished =1
+                    </trim>
+
+                </if>
 
 
+            <if test="from != null and to != null">
+                <trim prefix="and">
+                  dueDate between #{from} and #{to}
+                </trim>
+
+            </if>
         </where>
+    </sql>
 
+<!--        order by tno desc limit #{skip}, #{size}-->
 
-        order by tno desc limit #{skip}, #{size}
-
-    </select>
+<!--    </select>-->
 
 
 
