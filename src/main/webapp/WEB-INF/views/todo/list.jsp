@@ -54,16 +54,16 @@
 
                 <div class="card-body">
                     <h5 class="card-title">Search </h5>
-                    <form action="/todo/list" method="get">
+                    <form action="/springex/todo/list" method="get">
                         <input type="hidden" name="size" value="${pageRequestDTO.size}">
                         <div class="mb-3">
                             <input type="checkbox" name="finished" ${pageRequestDTO.finished?"checked":""} >완료여부
                         </div>
                         <div class="mb-3">
-<%--                            <input type="checkbox" name="types" value="t" ${pageRequestDTO.checkType("t")?"checked":""}>제목--%>
-<%--                            <input type="checkbox" name="types" value="w"  ${pageRequestDTO.checkType("w")?"checked":""}>작성자--%>
-                            <input type="checkbox" name="types" >제목
-                            <input type="checkbox" name="types" value="w" }>작성자
+                            <input type="checkbox" name="types" value="t" ${pageRequestDTO.checkType("t")?"checked":""}>제목
+                            <input type="checkbox" name="types" value="w"  ${pageRequestDTO.checkType("w")?"checked":""}>작성자
+<%--                            <input type="checkbox" name="types" value="t" >제목--%>
+<%--                            <input type="checkbox" name="types" value="w" >작성자--%>
                             <input type="text"  name="keyword" class="form-control" value ='<c:out value="${pageRequestDTO.keyword}"/>' >
                         </div>
                         <div class="input-group mb-3 dueDateDiv">
@@ -72,7 +72,8 @@
                         </div>
                         <div class="input-group mb-3">
                             <div class="float-end">
-                                <button class="btn btn-primary" type="submit">검색</button>
+                                <%--<button class="btn btn-primary" type="submit">검색</button>--%>
+                                <input type="submit" value=" 검색">
                                 <button class="btn btn-info clearBtn" type="reset">취소</button>
                             </div>
                         </div>
@@ -189,10 +190,28 @@
         }
 
         const num=target.getAttribute("data-num")
-        self.location=`/springex/todo/list?page=\${num}`
+       // self.location=`/springex/todo/list?page=\${num}`
+
+        const formObj = document.querySelector("form")
+
+        formObj.innerHTML += `<input type='hidden' name='page' value='\${num}'>`
+
+        formObj.submit();
+
 
 
     }, false);
+
+
+    document.querySelector(".clearBtn").addEventListener("click", function (e){
+
+        e.preventDefault()
+        e.stopPropagation()
+
+        self.location ='/springex/todo/list'
+    }, false);
+
+
 
 
 </script>

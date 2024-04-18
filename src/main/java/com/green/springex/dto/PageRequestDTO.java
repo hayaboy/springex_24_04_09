@@ -5,7 +5,10 @@ import lombok.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.Positive;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.time.LocalDate;
+import java.util.Arrays;
 
 @Builder
 @Getter
@@ -53,10 +56,38 @@ public class PageRequestDTO {
     public String getLink() {
         if(link == null){
             StringBuilder builder = new StringBuilder();
-
             builder.append("page=" + this.page);
-
             builder.append("&size=" + this.size);
+
+            //글 조회 링크시에 조건 검색 저장
+            if(finished){
+                builder.append("&finished=on");
+            }
+
+            if(types != null && types.length > 0){
+                for (int i = 0; i < types.length ; i++) {
+                    builder.append("&types=" + types[i]);
+                }
+            }
+
+
+            if(keyword != null){
+                try {
+                    builder.append("&keyword=" + URLEncoder.encode(keyword,"UTF-8"));
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if(from != null){
+                builder.append("&from=" + from.toString());
+            }
+
+            if(to != null){
+                builder.append("&to=" + to.toString());
+            }
+
+
             link = builder.toString();
         }
         return link;
@@ -67,7 +98,22 @@ public class PageRequestDTO {
     public String toString() {
         return "PageRequestDTO{" +
                 "page=" + page +
-                ", size=" + size +", "+"skip="+getSkip()+
+                ", size=" + size +
+                ", link='" + link + '\'' +
+                ", types=" + Arrays.toString(types) +
+                ", keyword='" + keyword + '\'' +
+                ", finished=" + finished +
+                ", from=" + from +
+                ", to=" + to +
                 '}';
     }
+
+
+    public boolean checkType(String type){
+        if(types == null || types.length == 0){
+            return false;
+        }
+        return Arrays.stream(types).anyMatch(type::equals);
+    }
+
 }

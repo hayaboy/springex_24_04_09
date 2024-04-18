@@ -1,6 +1,7 @@
 package com.green.springex.controller;
 
 import com.green.springex.dto.PageRequestDTO;
+import com.green.springex.dto.PageResponseDTO;
 import com.green.springex.dto.TodoDTO;
 import com.green.springex.service.TodoService;
 
@@ -40,13 +41,15 @@ public class TodoController {
     public void list(@Valid PageRequestDTO pageRequestDTO, BindingResult bindingResult, Model  model) {
         log.info("list --- GET#----");
         log.info("pageRequestDTO" +pageRequestDTO);
+        log.info("pageRequestDTO + link" +pageRequestDTO.getLink());
 
         //잘못된 파라미터값들이 들어오는 경우 기본값인 page 1, size는 10으로 고정된 값을 처리하도록 함
         if(bindingResult.hasErrors()){
             pageRequestDTO=PageRequestDTO.builder().build();
         }
-
-        model.addAttribute("responseDTO", todoService.getPagingList(pageRequestDTO));
+        PageResponseDTO<TodoDTO> pageResponseDTO = todoService.getPagingList(pageRequestDTO);
+        model.addAttribute("responseDTO", pageResponseDTO);
+        log.info(pageResponseDTO);
 
     }
 
@@ -117,18 +120,21 @@ public class TodoController {
     public String modifyPOST(PageRequestDTO pageRequestDTO,@Valid TodoDTO todoDTO, BindingResult bindingResult,
                          RedirectAttributes redirectAttributes){
         //log.info("기존 todoDTO"  + todoDTO);
-        if(bindingResult.hasErrors()) {
-            log.info("has errors.......");
-            redirectAttributes.addFlashAttribute("errors", bindingResult.getAllErrors() );
-            redirectAttributes.addAttribute("tno", todoDTO.getTno() );
-            return "redirect:/todo/modify";
-        }
+//        if(bindingResult.hasErrors()) {
+//            log.info("has errors.......");
+//            redirectAttributes.addFlashAttribute("errors", bindingResult.getAllErrors() );
+//            redirectAttributes.addAttribute("tno", todoDTO.getTno() );
+//            return "redirect:/todo/modify";
+//        }
         todoService.modify(todoDTO);
         log.info("수정후  todoDTO"  + todoDTO);
 
-        redirectAttributes.addAttribute("page",pageRequestDTO.getPage() );
-        redirectAttributes.addAttribute("size",pageRequestDTO.getSize());
-        return "redirect:/todo/list";
+//        redirectAttributes.addAttribute("page",pageRequestDTO.getPage() );
+//        redirectAttributes.addAttribute("size",pageRequestDTO.getSize());
+
+        redirectAttributes.addAttribute("tno", todoDTO.getTno());
+
+        return "redirect:/todo/read";
     }
 
 

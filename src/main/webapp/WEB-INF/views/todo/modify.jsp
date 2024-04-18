@@ -50,8 +50,11 @@
                         페이지와 관련된 정보를 같이 추가해서 전달해야만 합니다.
                         --%>
 
-                        <input type="hidden" name="page" value="${pageRequestDTO.page}">
-                        <input type="hidden" name="page" value="${pageRequestDTO.size}">
+                        <%-- 검색 / 필터링 기능이 추가되면 Todo의 내용이 수정되면서 검색 / 필터링 조건에 맞지 않게 됨
+                        따라서 검색 / 필터링의 경우 수정 후에 조회 페이지로 이동하게 하고 검색/필터링 조건은 없애는 것이 안전
+                        검색 / 필터링 조건을 유지하지 않는다면 hidden 태그 내용 삭제 --%>
+<%--                        <input type="hidden" name="page" value="${pageRequestDTO.page}">--%>
+<%--                        <input type="hidden" name="page" value="${pageRequestDTO.size}">--%>
 
                         <div class="input-group mb-3">
                             <span class="input-group-text">TNO</span>
